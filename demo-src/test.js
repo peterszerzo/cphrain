@@ -9,24 +9,50 @@ const drops = [
     x: .25,
     y: .5,
     scale: 1,
-    blur: 5
+    blur: 0
   },
   {
     x: .52,
     y: .52,
     scale: 1,
-    blur: 3
+    blur: 0
   },
   {
     x: .35,
     y: .5,
     scale: 1,
-    blur: 6
+    blur: 0
   }
 ];
 
+function generateDrops(n) {
+  const drops = [];
+  for (let i = 0; i < n; i++) {
+    drops.push({
+      x: Math.random(),
+      y: Math.random(),
+      scale: 1,
+      blur: 0
+    });
+  }
+  return drops;
+}
+
+function stepDrop({x, y, scale, blur}) {
+  const isOver = y > 1.2;
+  return {
+    scale,
+    blur,
+    x: isOver ? Math.random() : x,
+    y: isOver ? -.2 : y + .008
+  };
+}
+
+function stepDrops(drops) {
+  return drops.map(stepDrop);
+}
+
 domReady(() => {
   console.log('Hi, Mom!');
-  const rain = getRain(document.getElementById('app'));
-  rain(drops);
+  getRain(generateDrops(30), stepDrops, document.getElementById('app'));
 });

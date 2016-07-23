@@ -7,30 +7,35 @@ import Error from './components/error/error';
 import Drops from './components/drops/drops';
 import {style} from './constants';
 
-export default function getRain(container) {
+export default function getRain(initialDrops, step, container) {
 
-  let previousTree;
-  let rootNode;
-
-  return function rain(drops) {
-    let tree;
+  function rain(drops, rootNode, previousTree) {
+    let currentTree;
     try {
-      tree = Drops(drops, style);
+      currentTree = Drops(drops, style);
     } catch(err) {
-      tree = Error();
+      currentTree = Error();
     }
-    if (previousTree) {
-      let patches = diff(previousTree, tree);
-      window.requestAnimationFrame(() => {
-        rootNode = patch(rootNode, patches);
+    const patches = previousTree ? diff(previousTree, currentTree) : null;
+    const updateDom = previousTree
+      ?
+      (next) => {
+        const newRootNode = patch(rootNode, patches);
+        next(newRootNode);
+      }
+      :
+      (next) => {
+        container.innerHTML = '';
+        const newRootNode = createElement(currentTree);
+        container.appendChild(newRootNode);
+        next(newRootNode);
+      };
+    window.requestAnimationFrame(() => {
+      updateDom((rootNode) => {
+        rain(step(drops), rootNode, currentTree);
       });
-    } else {
-      container.innerHTML = '';
-      rootNode = createElement(tree);
-      window.requestAnimationFrame(() => {
-        container.appendChild(rootNode);
-      });
-    }
-    previousTree = tree;
+    });
   }
+
+  rain(initialDrops, null, null);
 }

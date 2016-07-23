@@ -39,7 +39,7 @@ function generateDrops(n) {
 }
 
 function stepDrop({x, y, scale, blur}) {
-  const isOver = y > 1.2;
+  const isOver = y > 1.4;
   return {
     scale,
     blur,

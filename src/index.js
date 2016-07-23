@@ -9,12 +9,24 @@ import {style} from './constants';
 
 export default function getRain(initialDrops, step, container) {
 
+  let isError = false;
+
   function rain(drops, rootNode, previousTree) {
+    if (isError) {
+      window.requestAnimationFrame(() => {
+        rain(drops, rootNode, previousTree);
+      });
+      return;
+    }
     let currentTree;
     try {
       currentTree = Drops(drops, style);
     } catch(err) {
       currentTree = Error();
+      isError = true;
+      setTimeout(() => {
+        isError = false;
+      }, 5000);
     }
     const patches = previousTree ? diff(previousTree, currentTree) : null;
     const updateDom = previousTree

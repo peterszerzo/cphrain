@@ -5,13 +5,14 @@ import createElement from 'virtual-dom/create-element';
 
 import Error from './components/error/error';
 import Drops from './components/drops/drops';
+import {style} from './constants';
 
 export default function getRain(container) {
 
   let previousTree;
   let rootNode;
 
-  return function rain(drops, style) {
+  return function rain(drops) {
     let tree;
     try {
       tree = Drops(drops, style);

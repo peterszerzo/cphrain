@@ -6,7 +6,7 @@ import getRain from './../src/index.js';
 
 const drops = [
   {
-    x: 3.25,
+    x: .25,
     y: .5,
     scale: 1,
     blur: 5
@@ -25,13 +25,8 @@ const drops = [
   }
 ];
 
-const style = {
-  dropColor: '#000',
-  backgroundColor: '#fff'
-};
-
 domReady(() => {
   console.log('Hi, Mom!');
   const rain = getRain(document.getElementById('app'));
-  rain(drops, style);
+  rain(drops);
 });

@@ -8,17 +8,23 @@
   display: flex;
   display: flex;
   z-index: 100;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(15, 102, 153, .8);
 }
 
 .commentary__content {
   margin: auto;
+  width: 100%;
   box-sizing: border-box;
   padding: 20px;
 }
 
+.commentary--transparent {
+  background-color: transparent;
+}
+
 * {
   font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
 }
 
 code {

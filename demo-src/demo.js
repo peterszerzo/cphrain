@@ -2,8 +2,6 @@ import domReady from 'domready';
 
 import './index.html';
 
-import getRain from './../src/index.js';
-
 const drops = [
   {
     x: .25,
@@ -54,5 +52,5 @@ function stepDrops(drops) {
 
 domReady(() => {
   console.log('Hi, Mom!');
-  getRain(generateDrops(30), stepDrops, document.getElementById('app'));
+  cphRain(generateDrops(30), stepDrops, document.getElementById('app'));
 });

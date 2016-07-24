@@ -5,11 +5,14 @@ const webpack = require('webpack');
 const validate = require('webpack-validator');
 
 const config = {
-  entry: './demo-src/test.js',
+  entry: {
+    demo: './demo-src/demo.js',
+    cphrain: './src/index.js'
+  },
   output: {
     path: path.resolve('./demo-build'),
     publicPath: '',
-    filename: 'index.js'
+    filename: '[name].js'
   },
   module: {
     loaders: [

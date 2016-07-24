@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development ./node_modules/.bin/webpack-dev-server --config webpack.config.js --hot --inline --open --content-base demo-build/ --port 3000",
+    "dev": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.config.js --watch",
     "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.js"
   },
   "author": "Peter Szerzo <szerzo.peter@gmail.com>",

@@ -6,11 +6,10 @@ const validate = require('webpack-validator');
 
 const config = {
   entry: {
-    demo: './demo-src/demo.js',
     cphrain: './src/index.js'
   },
   output: {
-    path: path.resolve('./demo-build'),
+    path: path.resolve('./demo/vendor'),
     publicPath: '',
     filename: '[name].js'
   },

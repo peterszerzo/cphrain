@@ -1,28 +1,3 @@
-import domReady from 'domready';
-
-import './index.html';
-
-const drops = [
-  {
-    x: .25,
-    y: .5,
-    scale: 1,
-    blur: 0
-  },
-  {
-    x: .52,
-    y: .52,
-    scale: 1,
-    blur: 0
-  },
-  {
-    x: .35,
-    y: .5,
-    scale: 1,
-    blur: 0
-  }
-];
-
 function generateDrops(n) {
   const drops = [];
   for (let i = 0; i < n; i++) {
@@ -37,7 +12,7 @@ function generateDrops(n) {
 }
 
 function stepDrop({x, y, scale, blur}) {
-  const isOver = y > 1.4;
+  const isOver = y > 1.2;
   return {
     scale,
     blur,
@@ -50,7 +25,5 @@ function stepDrops(drops) {
   return drops.map(stepDrop);
 }
 
-domReady(() => {
-  console.log('Hi, Mom!');
-  cphRain(generateDrops(30), stepDrops, document.getElementById('app'));
-});
+console.log('Hi, Mom!');
+cphRain(generateDrops(30), stepDrops, document.getElementById('app'));

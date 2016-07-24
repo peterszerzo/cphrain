@@ -1,0 +1,14 @@
+.commentary {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  z-index: 100;
+}
+
+h1 {
+  margin: auto;
+  font-family: 'Montserrat';
+  font-size: 12vw;
+  text-align: center;
+}

@@ -1,10 +1,11 @@
-## The toolbox
+## Your tool: cphrain.js
+
+Animate by calling this function once:
 
 ```js
-/* call me once, and I'll animate */
 cphRain(drops, stepDrops, container);
 ```
 
-`drops` &rarr; array of drops
-`stepDrops` &rarr; step function (takes drops, returns new drops)
-`container` &rarr; dom node
+* `drops` &rarr; array of drops
+* `stepDrops` &rarr; step function (takes drops, returns new drops)
+* `container` &rarr; dom node

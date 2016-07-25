@@ -16,7 +16,9 @@
     <script src="cphrain.js"></script>
     <script src="cphrain-demo.js"></script>
     <script>
-      cphRainDemo['{{slug}}']();
+      var fn = cphRainDemo['{{slug}}'];
+      var fnFallback = cphRainDemo['index'];
+      (fn || fnFallback)();
     </script>
   </body>
 </html>

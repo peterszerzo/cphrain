@@ -35,6 +35,16 @@ pre {
   padding: 20px;
 }
 
+.wrapper {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.wrapper--visible {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 .commentary {
   box-sizing: border-box;
   width: 100vw;

@@ -7,26 +7,29 @@
     <meta charset='utf-8'>
   </head>
   <body>
-    <div id="app"></div>
-    <div class="commentary{{#if isMain}} commentary--main{{/if}}">
-      <div class="commentary__content">
-        {{{content}}}
+    <div id="wrapper" class="wrapper">
+      <div id="app"></div>
+      <div class="commentary{{#if isMain}} commentary--main{{/if}}">
+        <div class="commentary__content">
+          {{{content}}}
+        </div>
       </div>
+      <nav class="nav">
+        {{#if backwardLinkUrl}}
+          <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}.html">&larr;</a>
+        {{/if}}
+        {{#if forwardLinkUrl}}
+          <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}.html">&rarr;</a>
+        {{/if}}
+      </nav>
     </div>
-    <nav class="nav">
-      {{#if backwardLinkUrl}}
-        <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}.html">&larr;</a>
-      {{/if}}
-      {{#if forwardLinkUrl}}
-        <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}.html">&rarr;</a>
-      {{/if}}
-    </nav>
     <script src="cphrain.js"></script>
     <script src="cphrain-demo.js"></script>
     <script>
-      var fn = cphRainDemo['{{slug}}'];
-      var fnFallback = cphRainDemo['index'];
-      (fn || fnFallback)();
+      cphRainDemo['{{slug}}']();
+      setTimeout(function() {
+        document.getElementById('wrapper').className = 'wrapper wrapper--visible';
+      }, 0);
     </script>
   </body>
 </html>

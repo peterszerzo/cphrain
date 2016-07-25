@@ -9,7 +9,7 @@ const config = {
     cphrain: './src/index.js'
   },
   output: {
-    path: path.resolve('./demo/vendor'),
+    path: path.resolve('./demo-build/vendor'),
     publicPath: '',
     filename: '[name].js'
   },

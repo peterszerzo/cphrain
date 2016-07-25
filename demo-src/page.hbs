@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CphRain | Task 3</title>
+    <title>{{title}}</title>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Inconsolata" rel="stylesheet">
     <link href="demo.css" rel="stylesheet">
@@ -9,13 +9,12 @@
   </head>
   <body>
     <div id="app"></div>
-    <div class="commentary">
+    <div class="commentary{{#if isMain}} commentary--main{{/if}}">
       <div class="commentary__content">
-        <h2>Task 3</h2>
-        <p>+ add depth effect</p>
+        {{{content}}}
       </div>
     </div>
     <script src="vendor/cphrain.js"></script>
-    <script src="scripts/task-3.js"></script>
+    <script src="scripts/{{slug}}.js"></script>
   </body>
 </html>

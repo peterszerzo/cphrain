@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "mkdir -p demo-build",
     "dev": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.config.js --watch",
-    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.js"
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.js",
+    "copy": "cp -r demo-src/scripts demo-build && cp demo-src/demo.css demo-build"
   },
   "author": "Peter Szerzo <szerzo.peter@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "domready": "^1.0.8",
+    "handlebars": "^4.0.5",
+    "marked": "^0.3.5",
     "virtual-dom": "^2.1.1"
   },
   "devDependencies": {

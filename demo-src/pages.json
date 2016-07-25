@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "index",
+    "title": "CphRain | Home",
+    "forwardLinkUrl": "api",
+    "backwardLinkUrl": null,
+    "isMain": true
+  },
+  {
+    "slug": "api",
+    "title": "CphRain | Api",
+    "forwardLinkUrl": "api",
+    "backwardLinkUrl": null
+  },
+  {
+    "slug": "task-1",
+    "title": "CphRain | Task 1",
+    "forwardLinkUrl": "task-2",
+    "backwardLinkUrl": "api"
+  },
+  {
+    "slug": "task-2",
+    "title": "CphRain | Task 1",
+    "forwardLinkUrl": "task-3",
+    "backwardLinkUrl": "task-1"
+  },
+  {
+    "slug": "task-3",
+    "title": "CphRain | Task 1",
+    "forwardLinkUrl": "task-4",
+    "backwardLinkUrl": "task-2"
+  },
+  {
+    "slug": "task-4",
+    "title": "CphRain | Task 1",
+    "forwardLinkUrl": null,
+    "backwardLinkUrl": "task-3"
+  }
+]

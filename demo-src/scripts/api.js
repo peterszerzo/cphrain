@@ -25,5 +25,7 @@ function stepDrops(drops) {
   return drops.map(stepDrop);
 }
 
-console.log('Hi, Mom!');
-cphRain(generateDrops(30), stepDrops, document.getElementById('app'));
+export default () => {
+  console.log('Hi, Mom!');
+  cphRain(generateDrops(30), stepDrops, document.getElementById('app'));
+}

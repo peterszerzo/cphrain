@@ -3,13 +3,15 @@
 const path = require('path');
 const webpack = require('webpack');
 const validate = require('webpack-validator');
+const postCssCssNext = require('postcss-cssnext');
 
 const config = {
   entry: {
-    cphrain: './src/index.js'
+    cphrain: './src/index.js',
+    'cphrain-demo': './demo-src/index.js'
   },
   output: {
-    path: path.resolve('./demo-build/vendor'),
+    path: path.resolve('./demo-build'),
     publicPath: '',
     filename: '[name].js'
   },
@@ -25,7 +27,11 @@ const config = {
       }, {
         test: /\.html$/,
         loader: 'file?name=[name].[ext]'
+      }, {
+        test: /\.css$/,
+        loader: 'style!css!postcss'
       }
+
     ]
   },
   resolve: {
@@ -38,6 +44,11 @@ const config = {
   ]
   :
   [],
+  postcss() {
+    return [
+      postCssCssNext()
+    ];
+  },
   devtool: 'source-map'
 };
 

@@ -4,9 +4,9 @@ const fs = require('fs');
 const Handlebars = require('handlebars');
 const marked = require('marked');
 
-const pages = require('./pages.json');
+const pages = require('../demo-src/pages.json');
 
-fs.readFile('./demo-src/page.hbs', 'utf-8', function(err, data) {
+fs.readFile('./demo-src/index.hbs', 'utf-8', function(err, data) {
   if (err) {
     return console.log(err);
   }

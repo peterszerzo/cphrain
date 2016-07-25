@@ -16,7 +16,7 @@
     "slug": "api-drops",
     "title": "CphRain | Api",
     "forwardLinkUrl": "api-step",
-    "backwardLinkUrl": "api-drops"
+    "backwardLinkUrl": "api"
   },
   {
     "slug": "api-step",
@@ -33,8 +33,8 @@
   {
     "slug": "api-error",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "api-container",
-    "backwardLinkUrl": "task-1"
+    "forwardLinkUrl": "task-1",
+    "backwardLinkUrl": "api-container"
   },
   {
     "slug": "task-1",
@@ -57,7 +57,14 @@
   {
     "slug": "task-4",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": null,
+    "forwardLinkUrl": "final",
     "backwardLinkUrl": "task-3"
+  },
+  {
+    "slug": "final",
+    "title": "CphRain | Final",
+    "forwardLinkUrl": null,
+    "backwardLinkUrl": "task-4",
+    "isMain": true
   }
 ]

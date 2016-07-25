@@ -19,6 +19,10 @@ h2 {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 3rem;
+}
+
 p,
 code,
 li {
@@ -66,4 +70,33 @@ pre {
 
 .commentary--main h1 {
   color: #FFFFFF;
+}
+
+.nav-link {
+  box-sizing: border-box;
+  z-index: 101;
+  position: fixed;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  padding-top: 10px;
+  top: calc(50% - 25px);
+  text-align: center;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.nav-link--left {
+  left: 15px;
+}
+
+.nav-link--right {
+  right: 15px;
 }

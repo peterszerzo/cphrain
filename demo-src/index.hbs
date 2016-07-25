@@ -13,6 +13,14 @@
         {{{content}}}
       </div>
     </div>
+    <nav class="nav">
+      {{#if backwardLinkUrl}}
+        <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}.html">&larr;</a>
+      {{/if}}
+      {{#if forwardLinkUrl}}
+        <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}.html">&rarr;</a>
+      {{/if}}
+    </nav>
     <script src="cphrain.js"></script>
     <script src="cphrain-demo.js"></script>
     <script>

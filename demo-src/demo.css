@@ -1,12 +1,7 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inconsolata', monospace;
   color: #000000;
   -webkit-font-smoothing: antialiased;
-}
-
-code {
-  font-family: 'Inconsolata', monospace;
-  line-height: 1.35;
 }
 
 h1 {
@@ -23,10 +18,20 @@ h3 {
   font-size: 3rem;
 }
 
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 p,
 code,
 li {
   font-size: 2rem;
+}
+
+ul {
+  padding-left: 30px;
 }
 
 pre {
@@ -37,12 +42,12 @@ pre {
 
 .wrapper {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity .5s;
 }
 
 .wrapper--visible {
   opacity: 1;
-  transition: opacity 1s;
+  transition: opacity .5s;
 }
 
 .commentary {

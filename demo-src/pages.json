@@ -37,10 +37,16 @@
     "backwardLinkUrl": "api-container"
   },
   {
+    "slug": "task-0",
+    "title": "CphRain | Task 1",
+    "forwardLinkUrl": "task-1",
+    "backwardLinkUrl": "api-error"
+  },
+  {
     "slug": "task-1",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "task-2",
-    "backwardLinkUrl": "api"
+    "backwardLinkUrl": "task-0"
   },
   {
     "slug": "task-2",

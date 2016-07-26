@@ -22,7 +22,7 @@ export default function cphRain(initialDrops, step, container) {
     try {
       currentTree = Drops(drops, style);
     } catch(err) {
-      currentTree = Error();
+      currentTree = Error(null, style);
       isError = true;
       setTimeout(() => {
         isError = false;

@@ -1,6 +1,6 @@
-## Your tool: cphrain.js
+## cphRain()
 
-Animate by calling this function once:
+In your Codepen link, the function above is available in the global name space. It handles rendering and animation for you, and you only need to call it once:
 
 ```js
 cphRain(drops, stepDrops, container);

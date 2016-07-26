@@ -1,4 +1,4 @@
-### drops
+## drops
 
 An array of the following structure:
 

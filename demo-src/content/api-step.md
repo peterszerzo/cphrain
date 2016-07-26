@@ -1,4 +1,4 @@
-### step
+## step
 
 A function that converts a list of drops into a new list of drops, the way you want them to be in the next animation frame:
 

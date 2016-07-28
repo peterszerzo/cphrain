@@ -1,5 +1,10 @@
+:root {
+  --monospace: 'Inconsolata', monospace;
+  --sans-serif: 'Montserrat', sans-serif;
+}
+
 * {
-  font-family: 'Inconsolata', monospace;
+  font-family: var(--monospace);
   color: #000000;
   -webkit-font-smoothing: antialiased;
 }
@@ -50,16 +55,6 @@ pre {
   padding: 20px;
 }
 
-.wrapper {
-  opacity: 0;
-  transition: opacity .5s;
-}
-
-.wrapper--visible {
-  opacity: 1;
-  transition: opacity .5s;
-}
-
 .commentary {
   box-sizing: border-box;
   width: 100vw;
@@ -98,6 +93,7 @@ pre {
 }
 
 .nav-link {
+  font-family: var(--sans-serif);
   box-sizing: border-box;
   z-index: 101;
   position: fixed;
@@ -108,7 +104,7 @@ pre {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  padding-top: 10px;
+  padding-top: 11px;
   top: calc(50% - 25px);
   text-align: center;
   opacity: .8;

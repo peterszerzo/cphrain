@@ -2,75 +2,81 @@
   {
     "slug": "index",
     "title": "CphRain | Home",
-    "forwardLinkUrl": "api",
+    "forwardLinkUrl": "/intro",
     "backwardLinkUrl": null,
     "isMain": true
   },
   {
+    "slug": "intro",
+    "title": "CphRain | Home",
+    "forwardLinkUrl": "/api",
+    "backwardLinkUrl": "/"
+  },
+  {
     "slug": "api",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "api-drops",
-    "backwardLinkUrl": "index"
+    "forwardLinkUrl": "/api-drops",
+    "backwardLinkUrl": "/intro"
   },
   {
     "slug": "api-drops",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "api-step",
-    "backwardLinkUrl": "api"
+    "forwardLinkUrl": "/api-step",
+    "backwardLinkUrl": "/api"
   },
   {
     "slug": "api-step",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "api-container",
-    "backwardLinkUrl": "api-drops"
+    "forwardLinkUrl": "/api-container",
+    "backwardLinkUrl": "/api-drops"
   },
   {
     "slug": "api-container",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "api-error",
-    "backwardLinkUrl": "api-step"
+    "forwardLinkUrl": "/api-error",
+    "backwardLinkUrl": "/api-step"
   },
   {
     "slug": "api-error",
     "title": "CphRain | Api",
-    "forwardLinkUrl": "task-1",
-    "backwardLinkUrl": "api-container"
+    "forwardLinkUrl": "/task-0",
+    "backwardLinkUrl": "/api-container"
   },
   {
     "slug": "task-0",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": "task-1",
-    "backwardLinkUrl": "api-error"
+    "forwardLinkUrl": "/task-1",
+    "backwardLinkUrl": "/api-error"
   },
   {
     "slug": "task-1",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": "task-2",
-    "backwardLinkUrl": "task-0"
+    "forwardLinkUrl": "/task-2",
+    "backwardLinkUrl": "/task-0"
   },
   {
     "slug": "task-2",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": "task-3",
-    "backwardLinkUrl": "task-1"
+    "forwardLinkUrl": "/task-3",
+    "backwardLinkUrl": "/task-1"
   },
   {
     "slug": "task-3",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": "task-4",
-    "backwardLinkUrl": "task-2"
+    "forwardLinkUrl": "/task-4",
+    "backwardLinkUrl": "/task-2"
   },
   {
     "slug": "task-4",
     "title": "CphRain | Task 1",
-    "forwardLinkUrl": "final",
-    "backwardLinkUrl": "task-3"
+    "forwardLinkUrl": "/final",
+    "backwardLinkUrl": "/task-3"
   },
   {
     "slug": "final",
     "title": "CphRain | Final",
     "forwardLinkUrl": null,
-    "backwardLinkUrl": "task-4",
+    "backwardLinkUrl": "/task-4",
     "isMain": true
   }
 ]

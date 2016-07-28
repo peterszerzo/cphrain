@@ -16,10 +16,10 @@
       </div>
       <nav class="nav">
         {{#if backwardLinkUrl}}
-          <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}.html">&larr;</a>
+          <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}">&larr;</a>
         {{/if}}
         {{#if forwardLinkUrl}}
-          <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}.html">&rarr;</a>
+          <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}">&rarr;</a>
         {{/if}}
       </nav>
     </div>
@@ -27,7 +27,6 @@
     <script src="cphrain-demo.js"></script>
     <script>
       cphRainDemo['{{slug}}']();
-      document.getElementById('wrapper').className = 'wrapper wrapper--visible';
     </script>
   </body>
 </html>

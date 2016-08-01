@@ -53,6 +53,7 @@ pre {
   background-color: rgba(0, 0, 0, .08);
   border-radius: 3px;
   padding: 20px;
+  overflow-x: scroll;
 }
 
 .commentary {
@@ -74,6 +75,10 @@ pre {
   max-width: 740px;
   max-height: 600px;
   overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    background:transparent;
+  }
   box-sizing: border-box;
   padding: 20px 40px;
   border-radius: 6px;
@@ -86,6 +91,7 @@ pre {
   max-height: none;
   width: auto;
   height: auto;
+  overflow: hidden;
 }
 
 .commentary--main h1 {

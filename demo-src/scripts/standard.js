@@ -4,8 +4,8 @@ function generateDrop(isTop) {
     x: Math.random(),
     y: isTop ? -.1 : Math.random(),
     scale: z > 0 ? (1 + z) : (1 + z / 2),
-    blur: Math.floor(6 * z),
-    v: 0.008 + 0.004 * z
+    blur: Math.floor(4 * z),
+    v: 0.008 + 0.007 * z
   };
 }
 

@@ -3,5 +3,6 @@ export const svgPath = 'm45.598,30.602c-11.485-20.581-11.91-27.72-11.917-27.908-
 
 export const style = {
   dropColor: '#FFFFFF',
-  backgroundColor: '#0F6699'
+  backgroundColor: '#0F6699',
+  errorBackgroundColor: '#BF0010'
 };

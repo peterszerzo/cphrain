@@ -58,14 +58,14 @@
   },
   {
     "slug": "task-1",
-    "rain": "uniform",
+    "rain": "multiple",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-2",
     "backwardLinkUrl": "/task-0"
   },
   {
     "slug": "task-2",
-    "rain": "standard",
+    "rain": "uniform",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-3",
     "backwardLinkUrl": "/task-1"

@@ -2,10 +2,20 @@ import h from 'virtual-dom/h';
 
 import {svgSize, svgPath} from '../../constants';
 
-const threshold = .3;
+const threshold = .2;
+const number = 'number';
 
 export default function Drop({x, y, scale, blur}, color) {
-  if (x < -threshold || x > 1 + threshold || y < - threshold || y > 1 + threshold) {
+  if (
+    (typeof x !== number) ||
+    (typeof y !== number) ||
+    (x < -threshold) ||
+    (y < -threshold) ||
+    (x > 1 + threshold) ||
+    (y > 1 + threshold) ||
+    (typeof scale !== number) ||
+    (typeof blur !== number)
+  ) {
     throw new Error();
   }
   const style = {

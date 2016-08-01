@@ -1,10 +1,14 @@
 function generateDrop(isTop) {
-  const random = Math.random();
+  const depthRandom = Math.random();
+  const directionRandom = Math.random();
+  const dir = directionRandom < .1 ? -1 : 1;
+  const y = isTop ? (directionRandom < .05 ? 1.1 : -.1) : Math.random();
   return {
     x: Math.random(),
-    y: isTop ? -.1 : Math.random(),
-    scale: (random <= 1/3) ? 2/3 : (random < 2/3 ? 1 : 1.5),
-    blur: (random <= 1/3 || random > 2/3) ? 3 : 0
+    y: y,
+    scale: (depthRandom <= 1/3) ? 2/3 : (depthRandom < 2/3 ? 1 : 1.5),
+    blur: (depthRandom <= 1/3 || depthRandom > 2/3) ? 3 : 0,
+    dir: dir
   };
 }
 
@@ -17,14 +21,15 @@ function generateInitialDrops(n) {
 }
 
 function stepDrop(drop) {
-  if (drop.y > 1.1) {
+  if (drop.y > 1.1 || drop.y < -.1) {
     return generateDrop(true);
   }
   return {
     scale: drop.scale,
     blur: drop.blur,
     x: drop.x,
-    y: drop.y + .003 * drop.scale
+    y: drop.y + .003 * drop.scale * drop.dir,
+    dir: drop.dir
   };
 }
 

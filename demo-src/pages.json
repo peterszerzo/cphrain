@@ -1,6 +1,7 @@
 [
   {
     "slug": "index",
+    "rain": "standard",
     "title": "CphRain | Home",
     "forwardLinkUrl": "/intro",
     "backwardLinkUrl": null,
@@ -8,72 +9,84 @@
   },
   {
     "slug": "intro",
+    "rain": "standard",
     "title": "CphRain | Home",
     "forwardLinkUrl": "/api",
     "backwardLinkUrl": "/"
   },
   {
     "slug": "api",
+    "rain": "standard",
     "title": "CphRain | Api",
     "forwardLinkUrl": "/api-drops",
     "backwardLinkUrl": "/intro"
   },
   {
     "slug": "api-drops",
+    "rain": "standard",
     "title": "CphRain | Api",
     "forwardLinkUrl": "/api-step",
     "backwardLinkUrl": "/api"
   },
   {
     "slug": "api-step",
+    "rain": "standard",
     "title": "CphRain | Api",
     "forwardLinkUrl": "/api-container",
     "backwardLinkUrl": "/api-drops"
   },
   {
     "slug": "api-container",
+    "rain": "standard",
     "title": "CphRain | Api",
     "forwardLinkUrl": "/api-error",
     "backwardLinkUrl": "/api-step"
   },
   {
     "slug": "api-error",
+    "rain": "standard",
     "title": "CphRain | Api",
     "forwardLinkUrl": "/task-0",
     "backwardLinkUrl": "/api-container"
   },
   {
     "slug": "task-0",
+    "rain": "single",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-1",
     "backwardLinkUrl": "/api-error"
   },
   {
     "slug": "task-1",
+    "rain": "uniform",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-2",
     "backwardLinkUrl": "/task-0"
   },
   {
     "slug": "task-2",
+    "rain": "standard",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-3",
     "backwardLinkUrl": "/task-1"
   },
   {
     "slug": "task-3",
+    "rain": "standard",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/task-4",
     "backwardLinkUrl": "/task-2"
   },
   {
     "slug": "task-4",
+    "rain": "standard",
     "title": "CphRain | Task 1",
     "forwardLinkUrl": "/final",
     "backwardLinkUrl": "/task-3"
   },
   {
     "slug": "final",
+    "rain": "standard",
     "title": "CphRain | Final",
     "forwardLinkUrl": null,
     "backwardLinkUrl": "/task-4",

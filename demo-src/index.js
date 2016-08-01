@@ -1,10 +1,10 @@
-import pages from './pages.json';
+import rains from './rains.json';
 
 import './demo.css';
 const cphRainDemo = {};
 
-pages.forEach(({slug}) => {
-  cphRainDemo[slug] = require(`./scripts/${slug}.js`).default;
+rains.forEach((rain) => {
+  cphRainDemo[rain] = require(`./scripts/${rain}.js`).default;
 });
 
 global.cphRainDemo = cphRainDemo;

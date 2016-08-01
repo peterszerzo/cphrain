@@ -10,6 +10,5 @@ function generateDrops(n) {
 }
 
 export default () => {
-  console.log('Hi, Mom!');
   cphRain(generateDrops(30), drops => drops, document.getElementById('app'));
 }

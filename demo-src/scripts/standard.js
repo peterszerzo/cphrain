@@ -35,6 +35,5 @@ function stepDrops(drops) {
 }
 
 export default () => {
-  console.log('Hi, Mom!');
   cphRain(generateInitialDrops(30), stepDrops, document.getElementById('app'));
 }

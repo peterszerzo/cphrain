@@ -7,7 +7,9 @@
     "setup": "mkdir -p demo-build",
     "dev": "NODE_ENV=development ./node_modules/.bin/webpack --config webpack.config.js --watch",
     "build:assets": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.config.js",
-    "build:demo:html": "node scripts/build-demo-html.js"
+    "build:demo:html": "node scripts/build-demo-html.js",
+    "deploy": "surge ./demo-build cphrain.surge.sh",
+    "publish": "npm run build:assets && npm run build:demo:html && npm run deploy"
   },
   "author": "Peter Szerzo <szerzo.peter@gmail.com>",
   "license": "ISC",

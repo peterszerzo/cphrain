@@ -14,6 +14,6 @@ An array of the following structure:
 
 For your safety:
 * `x`, `y`, `blur` and `scale` must be numbers.
-* `-0.1 < x < 1.1`
-* `-0.1 < y < 1.1`
+* `-0.2 < x < 1.2`
+* `-0.2 < y < 1.2`
 * no restrictions on any other fields.

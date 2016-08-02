@@ -2,6 +2,25 @@
 
 The drops from before, moving uniformly.
 
-!Please recycle! In the step function, if a drop went over, you need to put it back on top.
+**Recycling recommended** - in the step function, if a drop goes over, you need to put it back on top. Remember, if your `y` goes over 1.2, you'll get the good old ridiculous error messages :).
 
-Otherwise, you might be advised that the situation is highly dark blue, in German.
+```js
+function step(drops) {
+  return drops.map((drop) => {
+    if (drop.y > 1.1) {
+      return {
+        x: Math.random(),
+        y: -.1,
+        scale: 1,
+        blur: 0
+      };
+    }
+    return {
+      x: drop.x,
+      y: 'Forgot my raincoat!',
+      scale: drop.scale,
+      blur: drop.blur
+    };
+  });
+}
+```

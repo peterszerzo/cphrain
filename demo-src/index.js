@@ -9,7 +9,21 @@ rains.forEach((rain) => {
   cphRainDemo[rain] = require(`./scripts/${rain}.js`).default;
 });
 
-function addKeyboardListeners(document) {
+function addEventListeners(document) {
+  document.getElementById('nav').addEventListener('click', function(e) {
+    e.preventDefault();
+    const linkNode = e.path.filter((node) => {
+      const {className} = node;
+      return className && className.indexOf && className.indexOf('nav-link') > -1;
+    })[0];
+    if (linkNode) {
+      fadeOutSite();
+      setTimeout(() => {
+        window.location = linkNode.href;
+      }, 150);
+    }
+  });
+
   document.addEventListener('keydown', (e) => {
     const {keyCode} = e;
     if (keyCode === 37) {
@@ -24,8 +38,18 @@ function addKeyboardListeners(document) {
 }
 
 domReady(() => {
-  addKeyboardListeners(document);
+  addEventListeners(document);
 });
 
+function fadeInSite() {
+  document.getElementById('wrapper').className = 'wrapper';
+}
+
+function fadeOutSite() {
+  document.getElementById('wrapper').className = 'wrapper wrapper--hidden';
+}
+
+global.fadeInSite = fadeInSite;
+global.fadeOutSite = fadeOutSite;
 global.domReady = domReady;
 global.cphRainDemo = cphRainDemo;

@@ -1,5 +1,17 @@
 ## Task 4
 
-Same as before, but 5% of the drops move upward.
+Time to get freaky!
 
-Both the 95% downward moving and 5% upward moving drops are 1/3 regular, 1/3 far-slow-blurred and 1/3 close-fast-blurred, as before.
+Drops should be rendered and animated the same way as before (use the randomize function). However, 5% will be moving upwards.
+
+Remember that you can pass in drops with additional fields, like so:
+
+```js
+{
+  x: .35,
+  y: .2,
+  scale: 1,
+  blur: 0,
+  dir: -1
+}
+```

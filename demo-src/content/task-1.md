@@ -1,3 +1,3 @@
 ## Task 1
 
-30 drops, randomly positioned, scale 1, blur 0, not moving.
+Draw 30 drops, randomly positioned across the screen, scale 1, blur 0, not moving.

@@ -7,9 +7,10 @@
 }
 
 * {
-  font-family: var(--monospace);
+  font-family: var(--sans-serif);
   color: #000000;
   -webkit-font-smoothing: antialiased;
+  transition: opacity .5s;
 }
 
 h1 {
@@ -19,12 +20,12 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.6rem;
 }
 
 h3 {
   margin-top: 25px;
-  font-size: 3rem;
+  font-size: 2.4rem;
 }
 
 h1,
@@ -36,7 +37,11 @@ h3 {
 p,
 code,
 li {
-  font-size: 2rem;
+  font-size: 1.6rem;
+}
+
+code {
+  font-family: var(--monospace);
 }
 
 ul {
@@ -49,7 +54,7 @@ li {
 
 p,
 li {
-  line-height: 1.35;
+  line-height: 1.6;
 }
 
 pre {
@@ -83,10 +88,6 @@ pre {
   padding: 20px 40px;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, .8);
-}
-
-.commentary__content::-webkit-scrollbar * {
-  background:transparent;
 }
 
 .commentary--main .commentary__content {

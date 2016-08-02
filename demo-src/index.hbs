@@ -16,10 +16,26 @@
       </div>
       <nav class="nav">
         {{#if backwardLinkUrl}}
-          <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}">&larr;</a>
+          <a class="nav-link nav-link--left" href="{{backwardLinkUrl}}">
+            <svg stroke="#0F6699" viewBox="0 0 100 100">
+              <g stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="25" y1="50" x2="75" y2="50"/>
+                <line x1="25" y1="50" x2="40" y2="60"/>
+                <line x1="25" y1="50" x2="40" y2="40"/>
+              </g>
+            </svg>
+          </a>
         {{/if}}
         {{#if forwardLinkUrl}}
-          <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}">&rarr;</a>
+          <a class="nav-link nav-link--right" href="{{forwardLinkUrl}}">
+            <svg stroke="#0F6699" viewBox="0 0 100 100">
+              <g stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="25" y1="50" x2="75" y2="50"/>
+                <line x1="75" y1="50" x2="60" y2="60"/>
+                <line x1="75" y1="50" x2="60" y2="40"/>
+              </g>
+            </svg>
+          </a>
         {{/if}}
       </nav>
     </div>

@@ -7,7 +7,7 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div id="wrapper" class="wrapper">
+    <div id="wrapper" class="wrapper wrapper--hidden">
       <div id="app"></div>
       <div class="commentary{{#if isMain}} commentary--main{{/if}}">
         <div class="commentary__content">
@@ -20,8 +20,8 @@
             <svg stroke="#0F6699" viewBox="0 0 100 100">
               <g stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="25" y1="50" x2="75" y2="50"/>
-                <line x1="25" y1="50" x2="40" y2="60"/>
-                <line x1="25" y1="50" x2="40" y2="40"/>
+                <line x1="25" y1="50" x2="40" y2="62"/>
+                <line x1="25" y1="50" x2="40" y2="38"/>
               </g>
             </svg>
           </a>
@@ -31,8 +31,8 @@
             <svg stroke="#0F6699" viewBox="0 0 100 100">
               <g stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="25" y1="50" x2="75" y2="50"/>
-                <line x1="75" y1="50" x2="60" y2="60"/>
-                <line x1="75" y1="50" x2="60" y2="40"/>
+                <line x1="75" y1="50" x2="60" y2="62"/>
+                <line x1="75" y1="50" x2="60" y2="38"/>
               </g>
             </svg>
           </a>
@@ -42,8 +42,11 @@
     <script src="cphrain.js"></script>
     <script src="cphrain-demo.js"></script>
     <script>
-      console.log("Hi, Mom!");
-      cphRainDemo["{{rain}}"]();
+      domReady(function() {
+        document.getElementById('wrapper').className = 'wrapper';
+        console.log("Hi, Mom!");
+        cphRainDemo["{{rain}}"]();
+      });
     </script>
   </body>
 </html>

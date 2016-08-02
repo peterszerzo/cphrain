@@ -27,4 +27,5 @@ domReady(() => {
   addKeyboardListeners(document);
 });
 
+global.domReady = domReady;
 global.cphRainDemo = cphRainDemo;

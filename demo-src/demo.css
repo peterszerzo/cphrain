@@ -59,6 +59,16 @@ pre {
   overflow-x: scroll;
 }
 
+.wrapper {
+  opacity: 1;
+  transition: all .3s;
+}
+
+.wrapper--hidden {
+  opacity: 0;
+  transition: all .3s;
+}
+
 .commentary {
   box-sizing: border-box;
   width: 100vw;
@@ -83,6 +93,10 @@ pre {
   padding: 20px 40px;
   border-radius: 6px;
   background-color: rgba(255, 255, 255, .8);
+}
+
+.commentary__content::-webkit-scrollbar * {
+  background:transparent;
 }
 
 .commentary--main .commentary__content {
@@ -124,10 +138,6 @@ pre {
     top: 0;
     left: 0;
     position: absolute;
-  }
-
-  & g {
-    stroke: var(--blue);
   }
 }
 

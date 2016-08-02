@@ -2,7 +2,7 @@
 
 Time to get freaky!
 
-Drops should be rendered and animated the same way as before (use the randomize function). However, 5% will be moving upwards.
+Drops should be rendered and animated the same way as before. However, 5% will be moving upwards (you should randomize this one as well).
 
 Remember that you can pass in drops with additional fields, like so:
 

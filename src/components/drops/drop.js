@@ -25,7 +25,8 @@ export default function Drop({x, y, scale, blur}, color) {
     width: `${svgSize * scale}px`,
     height: `${svgSize * scale}px`,
     transform: `translate3d(${x * 100}vw, ${y * 100}vh, 0)`,
-    webkitFilter: `blur(${blur}px)`
+    webkitFilter: `blur(${blur}px)`,
+    filter: `blur(${blur}px)`
   };
   return h('div', {style}, [
     h('svg', {namespace: "http://www.w3.org/2000/svg", attributes: {viewBox: `0 0 ${svgSize} ${svgSize}`}}, [

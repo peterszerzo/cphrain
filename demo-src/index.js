@@ -1,4 +1,5 @@
 import domReady from 'domready';
+import fastClick from 'fastclick';
 
 import rains from './rains.json';
 
@@ -11,6 +12,9 @@ rains.forEach((rain) => {
 
 function addEventListeners(document) {
   document.getElementById('nav').addEventListener('click', function(e) {
+    if (!e || !e.path || !e.path.filter) {
+      return;
+    }
     e.preventDefault();
     const linkNode = e.path.filter((node) => {
       const {className} = node;
@@ -38,6 +42,7 @@ function addEventListeners(document) {
 }
 
 domReady(() => {
+  fastClick.attach(document.body);
   addEventListeners(document);
 });
 
